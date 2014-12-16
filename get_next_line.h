@@ -6,7 +6,7 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/28 17:49:58 by getrembl          #+#    #+#             */
-/*   Updated: 2014/12/15 19:02:09 by getrembl         ###   ########.fr       */
+/*   Updated: 2014/12/16 21:29:16 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <fcntl.h>
-# include "libft.h"
+# include "./libft/libft.h"
 
 int			get_next_line(int const fd, char **line);
 
