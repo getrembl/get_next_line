@@ -6,23 +6,20 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/28 17:48:43 by getrembl          #+#    #+#             */
-/*   Updated: 2014/12/16 21:31:16 by getrembl         ###   ########.fr       */
+/*   Updated: 2014/12/18 19:23:29 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 /*
-int read(int fd, char *buf, int count);
-fd = File descriptor depuis leauel lire;
-buf = buffer de destination;
-count = Nombre d\'octets a lire;
-
-Retourne le nombre d\'octets lus ou -1 en cas d\'erreur;
+**    int read(int fd, char *buf, int count);
+**    fd = File descriptor depuis leauel lire;
+**    buf = buffer de destination;
+**    count = Nombre d\'octets a lire;
+**
+**    Retourne le nombre d\'octets lus ou -1 en cas d\'erreur;
 */
-
-
-
 
 int 				get_next_line(int const fd, char **line)
 {
@@ -31,21 +28,18 @@ int 				get_next_line(int const fd, char **line)
 	static char		*bkp = NULL;
 	char			*bkp_join;
 
-	if (!line || !fd)
+	if (!line || !fd || BUFF_SIZE < 1 || (!bkp && (bkp = ft_strnew(1)) == NULL))
 		return (-1);
-	if (!bkp)
-		bkp = ft_strnew(1);
-	if (!(buf = (char *)malloc(sizeof(char) * BUFF_SIZE + 1)))
-		return (-1);
-	ret = 1;
+		ret = 1;
 	while (ret > 0)
 	{
-		if((ret = read(fd, buf, BUFF_SIZE)) != EOF)
+		buf = ft_memalloc(BUFF_SIZE + 1);
+		if((ret = read(fd, buf, BUFF_SIZE)) != EOF && ret > 0)
 		{
 			buf[ret] = '\0';
 			bkp = ft_strjoin(bkp, buf);
 		}
-		if ((bkp_join = ft_memchr(bkp, (char)'n', ft_strlen(bkp))) != NULL)
+		if ((bkp_join = ft_strchr(bkp, '\n')) != NULL)
 		{
 			*bkp_join = '\0';
 			if (!(*line = ft_strdup(bkp)))

@@ -6,21 +6,30 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/12 16:11:47 by getrembl          #+#    #+#             */
-/*   Updated: 2014/12/16 21:38:33 by getrembl         ###   ########.fr       */
+/*   Updated: 2014/12/18 18:26:51 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
+#include "libft.h"
 #include "get_next_line.h"
-#include <fcntl.h>
 
-int main(void)
+int main()
 {
-	int fd;
-	char *line = NULL;
+	char *line;
+	//int fd;
+	int ret = 1;
+	int i = 0;
 
-	fd = open("test", O_RDONLY);
-	while (get_next_line(fd, &line) == 1)
-		printf (&*line);
+	line = NULL;
+	//fd = open("mangcc", O_RDONLY);
+	//while((get_next_line(fd, &line)) > 0)
+	while (ret == 1)
+	{
+		ret = get_next_line(0, &line);
+		printf("ret = %d line[%i] = <%s>\n", ret, i, line);
+		//free(line);
+		i++;
+		//ft_putstr(line);
+		//ft_putchar('\n');
+	}
 	return (0);
 }
