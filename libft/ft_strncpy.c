@@ -6,7 +6,7 @@
 /*   By: getrembl <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 11:08:18 by getrembl          #+#    #+#             */
-/*   Updated: 2014/11/27 17:47:21 by getrembl         ###   ########.fr       */
+/*   Updated: 2014/12/01 16:55:52 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,15 @@ char		*ft_strncpy(char *dst, const char *src, size_t n)
 	size_t		index;
 
 	index = 0;
-	if (dst && src)
+	if (!dst || !src)
+		return (NULL);
+	while (n > 0 && src[index] != '\0')
 	{
-		if (ft_strlen (src) < n)
-			dst[ft_strlen (src) + 1] = '\0';
-		while (index < n)
-		{
-			dst[index] = src[index];
-			index++;
-		}
-		return (dst);
+		dst[index] = src[index];
+		index++;
+		n--;
 	}
-	return (NULL);
+	while (n--)
+		dst[index++] = '\0';
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 17:29:04 by getrembl          #+#    #+#             */
-/*   Updated: 2014/11/24 21:48:50 by getrembl         ###   ########.fr       */
+/*   Updated: 2014/12/03 21:50:52 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char			*ft_strstr(const char *s1, const char *s2)
 	const char	*s1_bkp;
 
 	s1_bkp = s1;
-	if (*s2 == 0)
+	if (!*s2)
 		return ((char *)s1_bkp);
 	while (*s1_bkp)
 	{

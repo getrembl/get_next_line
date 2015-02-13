@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_nwd.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 15:51:52 by getrembl          #+#    #+#             */
-/*   Updated: 2014/12/01 16:19:54 by getrembl         ###   ########.fr       */
+/*   Created: 2014/12/09 17:08:02 by getrembl          #+#    #+#             */
+/*   Updated: 2014/12/09 18:24:26 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+size_t		ft_nwd(char const *s, char c)
 {
-	while (*s1 != '\0' && *s1 == *s2)
-	{
-		if (*s1 == 0)
-			return (0);
-		s1++;
-		s2++;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	size_t	i;
+	int		i_bis;
+
+	i = 0;
+	i_bis = 0;
+	if (s)
+		while (s[i_bis++])
+			if (s[i_bis] == c && s[i_bis + 1] != c)
+				i++;
+	if (i == 0)
+		return (1);
+	return (i);
 }

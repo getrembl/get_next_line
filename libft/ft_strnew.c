@@ -6,7 +6,7 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/15 10:13:33 by getrembl          #+#    #+#             */
-/*   Updated: 2014/11/27 17:35:05 by getrembl         ###   ########.fr       */
+/*   Updated: 2015/01/12 14:17:57 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char		*ft_strnew(size_t size)
 
 	if (!(str = malloc (size * sizeof(char))))
 		return (NULL);
-	while (*str)
+	while (size--)
 		*str++ = '\0';
 	return (str);
 }

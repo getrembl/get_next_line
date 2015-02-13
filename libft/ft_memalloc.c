@@ -6,7 +6,7 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 23:30:12 by getrembl          #+#    #+#             */
-/*   Updated: 2014/11/27 16:54:20 by getrembl         ###   ########.fr       */
+/*   Updated: 2014/12/27 20:21:46 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ void		*ft_memalloc(size_t size)
 {
 	int		*ptr;
 
-	ptr = malloc (size * sizeof(int));
-	if (ptr == NULL)
+	if (!(ptr = malloc (size * sizeof(int))) || size == 0)
 		return (NULL);
 	return (ptr);
 }

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_wdlen.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 15:51:52 by getrembl          #+#    #+#             */
-/*   Updated: 2014/12/01 16:19:54 by getrembl         ###   ########.fr       */
+/*   Created: 2014/12/09 18:20:10 by getrembl          #+#    #+#             */
+/*   Updated: 2015/02/09 16:00:36 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+size_t		ft_wdlen(char const *s, char c, int i)
 {
-	while (*s1 != '\0' && *s1 == *s2)
-	{
-		if (*s1 == 0)
-			return (0);
-		s1++;
-		s2++;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	size_t	len;
+
+	len = 0;
+	if (s)
+		while (s[i] != c && s[i] != '\0')
+		{
+			i++;
+			len++;
+		}
+	return (len);
 }

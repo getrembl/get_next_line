@@ -1,0 +1,17 @@
+
+get_nex_line.c,218
+static int		lenstr(16,921
+static int		find_next_line(28,1062
+static char		*get_next_new_line(get_next_new_line40,1224
+static char		*concat_string(concat_string64,1697
+char			*get_next_line(get_next_line82,2013
+
+get_next_line.c,31
+int					get_next_line(62,1962
+
+main.c,17
+int main(15,920
+
+get_next_line.h,59
+# define	GET_NEXT_LINE_H14,917
+# define	BUFF_SIZE	16,943

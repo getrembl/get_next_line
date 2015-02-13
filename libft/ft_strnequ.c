@@ -6,7 +6,7 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/15 21:11:59 by getrembl          #+#    #+#             */
-/*   Updated: 2014/11/27 16:04:05 by getrembl         ###   ########.fr       */
+/*   Updated: 2014/12/02 14:27:33 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,12 @@ int			ft_strnequ(char const *s1, char const *s2, size_t n)
 	{
 		if (s1 == s2)
 			return (1);
-		while (s1[i] && s2[i] && i > (int)n)
+		while (s1[i] && s2[i] && i < (int)n)
 		{
 			if (s1[i] != s2[i])
 				return (0);
 			i++;
 		}
-		if (s1[i] == s2[i])
-			return (1);
 	}
-	return (0);
+	return (1);
 }

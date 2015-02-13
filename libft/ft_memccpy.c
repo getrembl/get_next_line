@@ -6,17 +6,17 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/09 20:27:25 by getrembl          #+#    #+#             */
-/*   Updated: 2014/11/24 21:47:09 by getrembl         ###   ########.fr       */
+/*   Updated: 2015/02/09 15:50:40 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void					*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	char		*dst_bkp;
-	const char	*src_bkp;
-	int			i;
+	unsigned char		*dst_bkp;
+	const unsigned char	*src_bkp;
+	int					i;
 
 	dst_bkp = dst;
 	src_bkp = src;

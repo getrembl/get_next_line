@@ -6,7 +6,7 @@
 /*   By: getrembl <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 16:46:43 by getrembl          #+#    #+#             */
-/*   Updated: 2014/11/27 16:54:50 by getrembl         ###   ########.fr       */
+/*   Updated: 2014/12/09 17:04:14 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 
 char			**ft_strsplit(char const *s, char c);
+char			**ft_strsplit_bis(char const *s, char c, char **tab, size_t i2);
 char			*ft_itoa(int n);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strchr(const char *s, int c);
@@ -48,8 +49,10 @@ int				ft_strnequ(char const *s1, char const *s2, size_t n);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 
+size_t			ft_nwd(char const *str, char c);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *s);
+size_t			ft_wdlen(char const *s, char c, int i);
 
 void			*ft_memalloc(size_t size);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
