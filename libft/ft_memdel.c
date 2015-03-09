@@ -6,7 +6,7 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/14 00:40:33 by getrembl          #+#    #+#             */
-/*   Updated: 2014/11/27 16:57:05 by getrembl         ###   ########.fr       */
+/*   Updated: 2015/02/23 19:00:03 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void		ft_memdel(void **ap)
 {
-	if (ap != NULL)
+	if (*ap != NULL || *ap || *ap != (void *)'\0')
 	{
 		free (*ap);
 		*ap = NULL;

@@ -6,14 +6,14 @@
 /*   By: getrembl <getrembl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/28 17:49:58 by getrembl          #+#    #+#             */
-/*   Updated: 2014/12/16 21:29:16 by getrembl         ###   ########.fr       */
+/*   Updated: 2015/03/04 18:25:18 by getrembl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		GET_NEXT_LINE_H
-# define	GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-# define	BUFF_SIZE	32
+# define BUFF_SIZE	32
 
 # include <unistd.h>
 # include <string.h>
